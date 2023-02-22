@@ -18,6 +18,9 @@ Propose one or more methods to parallelize this function across multiple compute
 If you’ve proposed more than 1 method - compare them: list their Pros and Cons. Here are some considerations for comparison:
 How much local memory is required by each node.
 
+A: m*k /np , B: k*n C:(m/np * n)
+
+
 How much data is received and sent by each node.
 
 How many computations are performed by each node.
