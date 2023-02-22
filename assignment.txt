@@ -17,8 +17,11 @@ Propose one or more methods to parallelize this function across multiple compute
 
 If you’ve proposed more than 1 method - compare them: list their Pros and Cons. Here are some considerations for comparison:
 How much local memory is required by each node.
+
 How much data is received and sent by each node.
+
 How many computations are performed by each node.
+
 Is there a minimum and/or maximum number of nodes required to implement it for a given k,m,n dimensions?
 How well does each solution scale vs. matrices dimension. For example, what if the dimensions of k,m,n are such that total data size required in each compute mode exceeds the size of node’s local memory.
 If you have only one method in mind, evaluate it for the above considerations.
