@@ -1,0 +1,31 @@
+MatMul
+Implement matrix multiplication in C.
+
+
+C[m,n] = A[m,k] * B[k,n]
+
+
+
+Define and then implement the matmul API assuming each one of the matrices A, B and C is stored in a contiguous buffer using row-major order. Think about this API as a generic library API that could be used by many other SW developers.
+
+Note, it is your choice whether to compile this function or just dry-write it. If you choose to compile this function, please balance how much time you spend on this task – it is desired you get enough time to work on the remaining tasks.
+
+
+
+Propose one or more methods to parallelize this function across multiple compute nodes and explain/describe these methods (in writing and/or slides). Please assume compute nodes do NOT have any shared memory between them.
+
+
+If you’ve proposed more than 1 method - compare them: list their Pros and Cons. Here are some considerations for comparison:
+How much local memory is required by each node.
+How much data is received and sent by each node.
+How many computations are performed by each node.
+Is there a minimum and/or maximum number of nodes required to implement it for a given k,m,n dimensions?
+How well does each solution scale vs. matrices dimension. For example, what if the dimensions of k,m,n are such that total data size required in each compute mode exceeds the size of node’s local memory.
+If you have only one method in mind, evaluate it for the above considerations.
+
+
+
+Implement one of the above methods assuming:
+The user-facing API (from task 1) stays unchanged.
+There are APIs to pass data between compute nodes. Define these APIs as you wish and describe what they do, but no need to implement them.
+Show the C code that runs on each compute node.
